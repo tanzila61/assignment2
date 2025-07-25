@@ -19,7 +19,11 @@
     text-decoration: none;
     font-weight: 500;
 }
-
+.photo{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
 .hero{
     display: flex;
   align-items: center;
@@ -88,7 +92,7 @@
 }
 
 .section-header h2 .highlight {
-  color: #e0701a; /* standout color */
+  color: #e0701a; 
 }
 
 .section-header p {
@@ -171,9 +175,8 @@ h2 {
 .cart-btn:hover {
   background-color: darkorange;
 }
-/* -------------------- RESPONSIVE DESIGN -------------------- */
+
 @media (max-width: 768px) {
-  /* 1. NAVBAR */
   .nav-links {
     display: flex;
     justify-content: flex-end;
@@ -185,7 +188,7 @@ h2 {
   }
 
   .nav-item:last-child {
-    display: block; /* Only show Cart */
+    display: block; 
     margin-right: 0;
   }
 
@@ -198,7 +201,7 @@ h2 {
     max-width: 120px;
   }
 
-  /* 2. HERO SECTION STACKED */
+  
   .hero {
     flex-direction: column;
     text-align: center;
@@ -217,7 +220,7 @@ h2 {
     margin-top: 1rem;
   }
 
-  /* 3. PRODUCT GRID: 2 COLUMNS ON MOBILE */
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -538,4 +541,35 @@ h2 {
 .footer__social .fa-youtube { background: #FF0000; }
 .footer__social .fa:hover {
   opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-left: -200px;
+  }
+  .footer__logo,
+  .footer__nav,
+  .footer__social {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+  .footer__nav {
+    flex-direction: column;
+    margin-left: -200px;
+  }
+  .footer__nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+  .footer__social img {
+    margin: 0 8px;
+  }
 }
